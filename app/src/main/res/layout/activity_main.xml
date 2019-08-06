@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="input host"
-            android:text="ac.qq.com"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="ac.qq.com" />
 
         <Button
             android:id="@+id/start_bt"
@@ -30,7 +30,8 @@
         android:id="@+id/info_sl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/top_ll">
+        android:layout_below="@id/top_ll"
+        android:layout_marginBottom="15dp">
 
         <TextView
             android:id="@+id/info"

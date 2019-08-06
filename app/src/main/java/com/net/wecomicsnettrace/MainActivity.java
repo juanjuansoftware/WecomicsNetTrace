@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements LDNetDiagnoListen
 
     @Override
     public void OnNetDiagnoFinished(String log) {
-
+        infoSl.fullScroll(ScrollView.FOCUS_DOWN);
     }
 
     @Override
@@ -128,8 +128,13 @@ public class MainActivity extends AppCompatActivity implements LDNetDiagnoListen
     }
 
     public static void showOrHide(Context context, Activity activity) {
-        ((InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE))
-                .hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
-                        InputMethodManager.HIDE_NOT_ALWAYS);
+        try {
+            ((InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE))
+                    .hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
+                            InputMethodManager.HIDE_NOT_ALWAYS);
+        } catch (Exception e) {
+
+        }
+
     }
 }
